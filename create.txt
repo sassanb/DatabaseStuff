@@ -1,0 +1,30 @@
+CREATE TABLE author(
+  authorID INTEGER NOT NULL, 
+  firstName CHAR(20) NOT NULL, 
+  lastName CHAR(20) NOT NULL, 
+  PRIMARY KEY (authorID)
+);
+
+
+
+CREATE TABLE authorISBN(
+  authorID INTEGER NOT NULL, 
+  isbn CHAR(10) NOT NULL
+);
+
+
+
+CREATE TABLE titles(
+  isbn CHAR(10) NOT NULL, 
+  title VARCHAR(500) NOT NULL, 
+  editionNumber INTEGER NOT NULL, 
+  copyRight CHAR(4) NOT NULL,
+  publisherID INTEGER NOT NULL,
+  price NUMERIC(8, 2) NOT NULL, 
+  PRIMARY KEY (isbn)
+);
+
+CREATE TABLE publisher(
+  publisherID INTEGER NOT NULL, 
+  publisherName CHAR(100) NOT NULL
+)
